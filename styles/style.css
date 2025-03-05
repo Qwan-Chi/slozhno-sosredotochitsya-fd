@@ -2,4 +2,68 @@
 
 .page {
   /* сохраните в разметке и стилях класс page у тега body. Он удобен, чтобы составлять селекторы для разных цветовых тем. */
+  font-size: var(--text-size);
+  font-family: var(--text-font);
+  background-image: var(--background-image);
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.header {
+  height: 100vh;
+  min-height: 668px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: min-content 1fr 1fr;
+  padding: var(--padding-header);
+}
+
+.rec__text {
+  display: flex;
+  grid-column: 3;
+  color: var(--accent-color);
+  gap: 10px;
+  align-self: center;
+}
+
+.rec__text::after{
+  background-color: var(--accent-color);
+  border-radius: 50%;
+  width: 9px;
+  height: 9px;
+  box-shadow: 0 0 4px 2px var(--accent-color);
+  content: '';
+  justify-self: center;
+  align-self: center;
+}
+
+.decorated-zone::before {
+  width: 25px;
+  height: 25px;
+  border-top: var(--accent-color) 1px solid;
+  border-right: var(--accent-color) 1px solid;
+  content: '';
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+
+.header__theme-menu {
+  grid-row: 2;
+  grid-column: 3;
+  justify-self: center;
+}
+
+.header__theme-menu-list {
+  display: grid;
+  gap: 10px;
+}
+
+.header__title {
+
+}
+
+.header__subtitle {
+  grid-row: 3;
 }
