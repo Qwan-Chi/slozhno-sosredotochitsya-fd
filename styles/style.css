@@ -15,7 +15,7 @@
   min-height: 668px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: min-content 1fr 1fr;
+  grid-template-rows: repeat(3, min-content);
   padding: var(--padding-header);
 }
 
@@ -24,7 +24,9 @@
   grid-column: 3;
   color: var(--accent-color);
   gap: 10px;
-  align-self: center;
+  margin-inline-end: 8px;
+  justify-self: end;
+  margin-block-start: 1px;
 }
 
 .rec__text::after{
@@ -49,21 +51,109 @@
   top: 10px;
 }
 
+.decorated-zone::after {
+  width: 25px;
+  height: 25px;
+  border-bottom: var(--accent-color) 1px solid;
+  border-left: var(--accent-color) 1px solid;
+  content: '';
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+
 .header__theme-menu {
   grid-row: 2;
   grid-column: 3;
-  justify-self: center;
+  justify-self: end;
+  margin-block-start: 45px;
 }
 
 .header__theme-menu-list {
   display: grid;
-  gap: 10px;
+  gap: 12px;
+}
+
+.header__theme-menu-button {
+  color: var(--accent-color);
+  background-color: transparent;
+  border: none;
+  font-size: var(--text-size);
+  text-transform: lowercase;
+  justify-self: center;
+  padding: 1.5px 13px;
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid var(--accent-color);
+
 }
 
 .header__title {
+  font-size: 120px;
+  color: var(--color-title);
+  grid-row: 3;
+  margin-block-start: 65px;
+  grid-column: 1 / 4;
+  text-shadow: 4px 4px 0 var(--accent-color);
+  line-height: 96px;
+  font-weight: var(--font-weight-title);
 
 }
 
 .header__subtitle {
-  grid-row: 3;
+  background-color: var(--accent-color);
+  font-weight: var(--font-weight-title);
+  grid-row: 4;
+  grid-column: 1 / 4;
+  color: black;
+  margin-block-start: 55px;
+  line-height: 23.4px;
+  margin-block-end: 66px;
+}
+
+.hrader__bottom__margin {
+  padding-block-start: 40px;
+}
+
+section {
+  padding: 14px 10px 14px 10px;
+}
+
+.header__md {
+  color: var(--accent-color);
+  margin-block-end: 20px;
+  line-height: 24px;
+  font-size: var(--text-size);
+}
+
+.header__sm {
+  font-size: var(--font-header-size);
+  color: black;
+  font-weight: var(--font-weight-title);
+  background-color: var(--accent-color);
+  margin-block-end: 9px;
+  line-height: 24px;
+}
+
+.text__paragraph {
+  font-size: var(--text-size);
+  line-height: 23.4px;
+  margin-block-end: 20px;
+  font-weight: var(--text-weight);
+  color: var(--text-color);
+
+}
+
+.light__header {
+  font-weight: 400;
+  margin-block-start: 18px;
+}
+
+.images__container {
+  display: grid;
+  gap: 20px;
+  padding: 10px;
+  image-orientation: center;
+  
 }
