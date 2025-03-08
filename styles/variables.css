@@ -15,3 +15,19 @@
   --font-weight-title: 700;
   --color-hover-button-menu: rgba(255, 0, 112, 0.4);
 }
+
+@media (prefers-color-scheme: light) {
+  :root.theme-auto {
+    --background-image: url(../images/cover-image-light.png);
+    --accent-color: #FF8DCB;
+    --text-size: 18px;
+    --text-color: #353430;
+    --text-weight: 400;
+    --text-header-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
+    --text-font: 'IBM Plex Mono', monospace;
+    --padding-header: 10px;
+    --color-title: #FFC2E6;
+    --font-weight-title: 700;
+    --color-hover-button-menu: rgba(50, 49, 45, 0.4);
+  }
+}
