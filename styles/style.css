@@ -91,15 +91,37 @@
   margin-block-start: 45px;
 }
 
+@media (width >= 1024px) {
+  .header__theme-menu {
+    grid-column: 2;
+    grid-row: 1;
+  }
+}
+
 @media (width >= 768px) {
   .header__theme-menu {
     margin-block-start: 150px;
   }
 }
 
+@media (width >= 1024px) {
+  .header__theme-menu {
+    margin-block-start: 0;
+    align-self: start;
+    margin-inline-start: 20px;
+    justify-self: center;
+  }
+}
+
 .header__theme-menu-list {
   display: grid;
   gap: 12px;
+}
+
+@media (width >= 1024px) {
+  .header__theme-menu-list {
+    display: flex;
+  }
 }
 
 .header__theme-menu-button {
@@ -116,13 +138,13 @@
   border: 1px solid var(--color-hover-button-menu);
 }
 
-.header__theme-menu-button:focus {
+.header__theme-menu-button:focus-visible {
   outline: none;
-  border: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--accent-color);
 }
 
 .header__theme-menu-button_active {
-  border-block-end: 1px solid currentColor;
+  border: 1px solid currentColor;
 }
 
 .header__margin-top {
@@ -135,12 +157,25 @@
   }
 }
 
+@media (width >= 1024px) {
+  .header__margin-top {
+    padding-block-start: 285px;
+  }
+}
+
 .header__title {
   font-size: 120px;
   color: var(--color-title);
   text-shadow: 4px 4px 0 var(--accent-color);
   line-height: 96px;
   font-weight: var(--font-weight-title);
+}
+
+@media (width >= 1024px) {
+  .header__title {
+    font-size: 155px;
+    line-height: 120px;
+  }
 }
 
 .header__top {
@@ -166,6 +201,12 @@
     align-self: center;
     justify-self: end;
     max-width: 363px;
+  }
+}
+
+@media (width >= 1024px) {
+  .header__subtitle {
+    max-width: 490px;
   }
 }
 
@@ -197,6 +238,13 @@ section {
   }
 }
 
+@media (width >= 1024px) {
+  section {
+    grid-template-columns: 1fr 1.9fr;
+    padding-inline-start: 14px ;
+  }
+}
+
 @media (width >= 768px) {
   .section-сoncentration__margin {
     margin-block-start: 31px;
@@ -211,9 +259,24 @@ section {
 }
 
 @media (width >= 768px) {
-  .tablet__section {
+  .grid__section {
     display: grid;
     grid-template-columns: 1fr;
+  }
+}
+
+@media (width >= 1024px) {
+  .grid__section {
+    grid-template-rows: 98px 1fr;
+
+  }
+}
+
+@media (width >= 1024px) {
+  .text__list {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
   }
 }
 
@@ -230,9 +293,22 @@ section {
   }
 }
 
+@media (width >= 1024px) {
+  .header__md {
+    padding-inline-start: 6px;
+    width: 310px;
+  }
+}
+
 @media (width >= 768px) {
   .header-goldfish__width {
     width: 230px;
+  }
+}
+
+@media (width >= 1024px) {
+  .header-goldfish__width {
+    width: 300px;
   }
 }
 
