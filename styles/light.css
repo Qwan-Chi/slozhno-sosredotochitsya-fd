@@ -13,6 +13,7 @@
 
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
+  --show-rec: none;
   --background-image: url(../images/cover-image-light.png);
   --accent-color: #FF8DCB;
   --text-size: 18px;

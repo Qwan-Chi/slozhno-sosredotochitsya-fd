@@ -18,6 +18,7 @@
 
 @media (prefers-color-scheme: light) {
   :root.theme-auto {
+    --show-rec: none;
     --background-image: url(../images/cover-image-light.png);
     --accent-color: #FF8DCB;
     --text-size: 18px;
