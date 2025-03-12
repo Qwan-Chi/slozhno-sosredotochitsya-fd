@@ -1,0 +1,79 @@
+/* Стили основных секций */
+
+.section-heading {
+  font-size: var(--text-size);
+  line-height: var(--line-height);
+  font-weight: 700;
+  margin: 0;
+  color: var(--accent-color);
+  margin-bottom: 20px;
+}
+
+.section-subheading {
+  font-size: var(--text-size);
+  line-height: var(--line-height);
+  background-color: var(--accent-color);
+  color: var(--background-color);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.text__paragraph {
+  line-height: var(--line-height);
+}
+
+.section-attention {
+  margin-block-start: 50px;
+}
+
+.multitasking-body {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.attention-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-how-to {
+  margin-block-start: 50px;
+}
+
+.heading-extended {
+  margin-block-end: 20px;
+}
+
+.list-advices {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-picture {
+  margin-block-start: 50px;
+}
+
+.images__list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.images__item {
+  max-width: 100%;
+  height: auto;
+}
+
+.footer {
+  margin-block-start: 40px;
+  position: relative;
+  height: 100vh;
+  min-height: 668px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: min-content 1.3fr min-content 1fr;
+  padding: 10px 10px 10px 10px;
+}

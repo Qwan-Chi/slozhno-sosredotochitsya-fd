@@ -1,9 +1,7 @@
-@import url(./desktop.css);
-@import url(./tablet.css);
-
 .page {
   font-size: var(--text-size);
   font-family: var(--text-font);
+  background-color: var(--background-color);
   background-image: var(--background-image);
   background-position: center;
   background-size: cover;
@@ -144,7 +142,7 @@
 
 .header__theme-menu-button:focus-visible {
   outline: none;
-  border-block-end: 1px solid var(--accent-color);
+  border-block-end: 1px solid currentColor;
 }
 
 .header__margin-top {
@@ -173,7 +171,7 @@
 
 @media (width >= 1024px) {
   .header__title {
-    font-size: 155px;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
     line-height: 120px;
   }
 }
@@ -252,6 +250,12 @@ section {
   }
 }
 
+@media (width >= 1024px) {
+  .section-сoncentration__margin {
+    margin-block-start: 92px;
+  }
+}
+
 @media (width >= 768px) {
   .section-picture {
     grid-template-columns: 1fr;
@@ -313,6 +317,11 @@ section {
   }
 }
 
+.article__flex {
+  display: flex;
+  flex-direction: column;
+}
+
 .header__sm {
   font-size: var(--font-header-size);
   color: black;
@@ -325,7 +334,6 @@ section {
 .text__paragraph {
   font-size: var(--text-size);
   line-height: 23.4px;
-  margin-block-end: 20px;
   font-weight: var(--text-weight);
   color: var(--text-color);
 }
@@ -346,7 +354,7 @@ section {
 
 .regular__header {
   font-weight: 400;
-  margin-block-start: 20px;
+  margin-block-start: 12px;
 }
 
 .images__list {

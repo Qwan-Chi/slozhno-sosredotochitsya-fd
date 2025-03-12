@@ -14,15 +14,16 @@
 .theme-light .page {
   /* Вам также нужно будет написать ряд подобных селекторов */
   --show-rec: none;
+  --background-color: #fff1f7;
   --background-image: url(../images/cover-image-light.png);
-  --accent-color: #FF8DCB;
+  --accent-color: #ff8dcb;
   --text-size: 18px;
   --text-color: #353430;
   --text-weight: 400;
   --text-header-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
-  --text-font: 'IBM Plex Mono', monospace;
+  --text-font: "IBM Plex Mono", monospace;
   --padding-header: 10px;
-  --color-title: #FFC2E6;
+  --color-title: #ffc2e6;
   --font-weight-title: 700;
   --color-hover-button-menu: rgba(50, 49, 45, 0.4);
 }
