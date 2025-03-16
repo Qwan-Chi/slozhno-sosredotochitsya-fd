@@ -1,5 +1,3 @@
-/* Стили Обложки */
-
 .header {
   position: relative;
   height: 100vh;
@@ -14,7 +12,7 @@
 .rec__text {
   grid-column: 4;
   grid-row: 1;
-  display: flex;
+  display: var(--show-rec);
   gap: 10px;
   margin-block-start: 2px;
   margin-inline-start: 29px;
@@ -46,9 +44,24 @@
   text-align: center;
   flex-direction: column;
   margin-block-end: 30px;
+  color: var(--edge-color);
 }
 
-.header__title {
+.header__theme-menu-button:hover {
+  border: 1px solid var(--color-hover-button-menu);
+}
+
+.header__theme-menu-button_active {
+  border: 1px solid currentColor;
+  pointer-events: none;
+}
+
+.header__theme-menu-button:focus-visible {
+  outline: none;
+  border-block-end: 1px solid currentColor;
+}
+
+.title {
   position: relative;
   bottom: 24px;
   font-size: var(--text-header-size);
@@ -65,7 +78,7 @@
 .header__subtitle {
   margin-block-start: 5px;
   background-color: var(--accent-color);
-  color: var(--background-color);
+  color: var(--color-subtitle);
   grid-column: 1 / 5;
   grid-row: 4;
   width: 100%;
@@ -79,15 +92,13 @@
   background: none;
   appearance: none;
   border: none;
-  color: var(--accent-color);
+  color: var(--color-theme);
   text-transform: lowercase;
 }
 
 .header__theme-menu-button_active {
   border: 1px solid currentColor;
 }
-
-/* Уголки камеры */
 
 .decorated-zone {
   position: relative;
@@ -100,8 +111,8 @@
   position: absolute;
   bottom: 10px;
   left: 10px;
-  border-block-end: 1px solid var(--accent-color);
-  border-inline-start: 1px solid var(--accent-color);
+  border-block-end: 1px solid var(--edge-color);
+  border-inline-start: 1px solid var(--edge-color);
 }
 
 .decorated-zone::after {
@@ -111,6 +122,80 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  border-block-start: 1px solid var(--accent-color);
-  border-inline-end: 1px solid var(--accent-color);
+  border-block-start: 1px solid var(--edge-color);
+  border-inline-end: 1px solid var(--edge-color);
+}
+
+@media (width >= 768px) {
+  .header {
+    grid-template-rows: min-content 1fr min-content 1fr;
+    padding-inline-start: 0;
+    padding-block-end: 37px;
+    margin-block-end: 57px;
+  }
+  .rec__text {
+    margin-block-start: 13px;
+    margin-inline-end: 17px;
+    justify-self: end;
+  }
+
+  .header__theme-menu {
+    justify-self: end;
+    margin-block-start: 22px;
+    margin-inline-end: 10px;
+  }
+
+  .title {
+    grid-column: 1 / 5;
+    margin-block-end: 0;
+    margin-inline-start: 4px;
+    bottom: 0;
+    font-size: clamp(7.5rem, 0.5625rem + 14.4531vw, 9.8125rem);
+  }
+
+  .header__subtitle {
+    grid-column: 3 / 5;
+    align-self: center;
+    margin-inline-start: 8px;
+    max-width: 364px;
+    margin-inline-end: 10px;
+  }
+
+  .decorated-zone::before {
+    bottom: 20px;
+    left: 20px;
+  }
+
+  .decorated-zone::after {
+    top: 20px;
+    right: 20px;
+  }
+}
+
+@media (width >= 1024px) {
+  .header {
+    margin-block-end: 60px;
+  }
+
+  .rec__text {
+    align-items: center;
+    max-height: min-content;
+  }
+
+  .header__theme-menu {
+    grid-row: 1;
+    grid-column: 2/4;
+    justify-self: center;
+    margin-block-end: 0;
+    margin-block-start: 10px;
+  }
+
+  .header__theme-menu-list {
+    flex-direction: row;
+  }
+  .header__subtitle {
+    margin-block-start: 0;
+    max-width: 491px;
+    margin-inline-end: 10px;
+  }
 }

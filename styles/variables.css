@@ -1,32 +1,37 @@
-/*
-  Переменные для вашего проекта
-  и их переопределение под различные устройства
-*/
 :root {
   --show-rec: flex;
   --background-color: #000028;
   --background-image: url(../images/cover-image-dark.png);
   --accent-color: #ff0070;
+  --heading-color: var(--accent-color);
+  --text-color: #f1b2ce;
+  --color-title: #db00ff;
+  --edge-color: var(--accent-color);
+  --color-subtitle: var(--background-color);
+  --color-hover-button-menu: rgba(255, 0, 112, 0.4);
+  --text-heading-subtitle: var(--accent-color);
+  --color-theme: var(--accent-color);
   --text-size: 18px;
   --line-height: 23.4px;
-  --text-color: #f1b2ce;
   --text-weight: 400;
   --text-header-size: clamp(7.25rem, 7.0115rem + 1.0178vw, 7.5rem);
   --text-font: "IBM Plex Mono", monospace;
-  --color-title: #db00ff;
   --font-weight-title: 700;
-  --color-hover-button-menu: rgba(255, 0, 112, 0.4);
 }
 
 @media (prefers-color-scheme: light) {
   :root.theme-auto {
-    --background-color: #fff1f7;
     --show-rec: none;
+    --background-color: #fff1f7;
     --background-image: url(../images/cover-image-light.png);
     --accent-color: #ff8dcb;
-    --text-size: 18px;
+    --heading-color: var(--text-color);
     --text-color: #353430;
     --color-title: #ffc2e6;
+    --edge-color: var(--text-color);
+    --text-heading-subtitle: var(--text-color);
     --color-hover-button-menu: rgba(50, 49, 45, 0.4);
+    --color-subtitle: var(--text-color);
+    --color-theme: var(--text-color);
   }
 }

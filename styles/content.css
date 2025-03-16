@@ -1,25 +1,28 @@
-/* Стили основных секций */
-
 .section-heading {
   font-size: var(--text-size);
   line-height: var(--line-height);
   font-weight: 700;
   margin: 0;
-  color: var(--accent-color);
+  color: var(--text-heading-subtitle);
   margin-bottom: 20px;
+}
+
+.section-subheading.header-light {
+  font-weight: 400;
 }
 
 .section-subheading {
   font-size: var(--text-size);
   line-height: var(--line-height);
   background-color: var(--accent-color);
-  color: var(--background-color);
+  color: var(--color-subtitle);
   font-weight: 700;
   margin-bottom: 10px;
 }
 
 .text__paragraph {
   line-height: var(--line-height);
+  color: var(--text-color);
 }
 
 .section-attention {
@@ -76,4 +79,94 @@
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: min-content 1.3fr min-content 1fr;
   padding: 10px 10px 10px 10px;
+}
+
+@media (width >= 768px) {
+  .multitasking-body {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .why-list {
+    display: grid;
+    grid-template-columns: 1.1fr 2.19fr;
+    gap: 20px;
+  }
+
+  .small-heading {
+    max-width: 30%;
+  }
+
+  .section-how-to {
+    display: grid;
+    grid-template-columns: 1.1fr 2fr;
+    margin-block-start: 80px;
+  }
+
+  .section-picture {
+    margin-block-start: 80px;
+  }
+
+  .images__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-block-start: 20px;
+  }
+
+  .images__item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .images__beach {
+    grid-column: 1 / 3;
+  }
+
+  .images__icecream {
+    grid-column: 3;
+    grid-row: 1 / 3;
+  }
+
+  .images__tape {
+    grid-column: 1;
+    grid-row: 2 / 4;
+  }
+
+  .image__street {
+    grid-column: 2 / 4;
+    grid-row: 3;
+  }
+
+  .footer .title {
+    align-self: center;
+    margin-block-end: 0;
+    bottom: 0;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: center;
+    margin-block-start: 59px;
+  }
+}
+
+@media (width >= 1024px) {
+  .why-list {
+    grid-template-columns: 1.1fr 2.25fr;
+  }
+
+  .attention-list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .section-how-to {
+    margin-block-start: 56px;
+    gap: 25px;
+    grid-template-columns: 1fr 2.1fr;
+  }
 }
