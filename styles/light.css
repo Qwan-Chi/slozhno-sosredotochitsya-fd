@@ -12,3 +12,20 @@
   --color-subtitle: var(--text-color);
   --color-theme: var(--text-color);
 }
+
+@media (prefers-color-scheme: light) {
+  :root.theme-auto {
+    --show-rec: none;
+    --background-color: #fff1f7;
+    --background-image: url(../images/cover-image-light.png);
+    --accent-color: #ff8dcb;
+    --heading-color: var(--text-color);
+    --text-color: #353430;
+    --color-title: #ffc2e6;
+    --edge-color: var(--text-color);
+    --text-heading-subtitle: var(--text-color);
+    --color-hover-button-menu: rgba(50, 49, 45, 0.4);
+    --color-subtitle: var(--text-color);
+    --color-theme: var(--text-color);
+  }
+}
